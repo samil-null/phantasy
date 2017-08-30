@@ -50,7 +50,7 @@ gulp.task('css:build', function(){
 gulp.task('auto-pref', () =>
     gulp.src('dist/css/*.css')
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            browsers: ['> 5%'],
             cascade: false
         }))
         .pipe(gulp.dest('dist/css/'))
