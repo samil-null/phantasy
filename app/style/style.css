@@ -19,6 +19,13 @@
   font-style: normal;
   font-weight: normal; }
 
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/OpenSansBold/OpenSansBold.eot");
+  src: url("../fonts/OpenSansBold/OpenSansBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansBold/OpenSansBold.woff") format("woff"), url("../fonts/OpenSansBold/OpenSansBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
 /*---------------------------var-----------------------*/
 * {
   margin: 0;
@@ -29,6 +36,7 @@ html {
   font-size: 10px; }
 
 a {
+  transition: .2s;
   color: black; }
 
 body {
@@ -43,7 +51,7 @@ ul {
 
 a:hover {
   text-decoration: none;
-  color: inherit; }
+  color: #cb461d; }
 
 img {
   max-width: 100%;
@@ -237,3 +245,19 @@ img {
       transition: .2s; }
       .last-new_content_main:hover {
         color: #cb461d; }
+
+.wrap-video {
+  margin-bottom: 3rem; }
+  .wrap-video_name {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-family: OpenSansLight, arial, sans-serif; }
+
+.all-video {
+  font-size: 1.2rem;
+  font-family: OpenSansBold, arial, sans-serif;
+  font-weight: 900;
+  line-height: 1.8rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: red; }

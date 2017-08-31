@@ -11,7 +11,7 @@ const autoprefixer = require('gulp-autoprefixer');
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/sass/**/*.scss') // Берем источник
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
-        .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
+        .pipe(gulp.dest('app/style')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
 
@@ -34,7 +34,7 @@ gulp.task('watch', ['browser-sync', 'sass'], function() {
 
 gulp.task('css:build', function(){
 	
-	return gulp.src('app/css/*.css')
+	return gulp.src(['app/css/*.css','app/style/*.css'])
 	
 	.pipe(concat('style.min.css'))
 
@@ -61,6 +61,10 @@ gulp.task('html:build', function() {
   gulp.src('app/*.html')
   .pipe(gulp.dest('dist/'))
 });
+gulp.task('font:build', function() {
+  gulp.src('app/fonts/*')
+  .pipe(gulp.dest('dist/fonts'))
+});
 
 gulp.task('img:build', function() {
   gulp.src('app/img/*')
@@ -76,5 +80,5 @@ gulp.task('js:build', function() {
 });
 
 
-gulp.task('build', ['auto-pref', 'css:build', 'img:build', 'js:build','html:build'])
+gulp.task('build', ['auto-pref', 'css:build', 'img:build', 'js:build','html:build', 'font:build'])
 	

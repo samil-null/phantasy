@@ -26,6 +26,15 @@
 			font-style: normal;
 			font-weight: normal;
 	}
+	@font-face {
+				font-family: "OpenSansBold";
+				src: url("../fonts/OpenSansBold/OpenSansBold.eot");
+				src: url("../fonts/OpenSansBold/OpenSansBold.eot?#iefix")format("embedded-opentype"),
+				url("../fonts/OpenSansBold/OpenSansBold.woff") format("woff"),
+				url("../fonts/OpenSansBold/OpenSansBold.ttf") format("truetype");
+				font-style: normal;
+				font-weight: normal;
+		}
 
 
 
@@ -47,7 +56,7 @@ $eny-font:arial,sans-serif;
 $osc:OpenSansCond,$eny-font;
 $osl:OpenSansLight,$eny-font;
 $osr:OpenSansRegular, $eny-font;
-
+$osb:OpenSansBold, $eny-font;
 
 
 
@@ -71,6 +80,7 @@ html{
 	font-size: 10px;
 }
 a{
+	transition: .2s;
 	color:black;
 }
 body{
@@ -85,7 +95,7 @@ ul{
 }
 a:hover{
 	text-decoration: none;
-	color: inherit;
+	color: $red;
 }
 img{
 	max-width: 100%;
@@ -332,9 +342,26 @@ img{
 		}
 	}
 }
+.wrap-video{
 
+	margin-bottom: 3rem;
+	&_name{
+		font-size: 1.5rem ;
+		line-height: 1.8rem;
+		font-family: $osl;
 
+	}
+}
 
+.all-video{
+	font-size: 1.2rem;
+	font-family: $osb;
+	font-weight: 900;
+	line-height: 1.8rem;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	color: red;
+}
 
 
 
