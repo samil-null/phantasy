@@ -82,6 +82,14 @@ img {
 .carousel-indicators li {
   background: none; }
 
+.carousel-control-prev, .carousel-control-next {
+  transition: .3s;
+  width: 10%; }
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background: #000;
+  opacity: .5; }
+
 /*-----------------------event----------------*/
 .wrap-event {
   background: #fff; }
