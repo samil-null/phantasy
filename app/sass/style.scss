@@ -1,7 +1,31 @@
 /*---------------font--------------*/
 
 
+@font-face {
+			font-family: "OpenSansCond";
+			src: url("../fonts/open-sans-cond/OpenSans-CondBold.ttf");
 
+			font-style: normal;
+			font-weight: normal;
+	}
+	@font-face {
+			font-family: "OpenSansLight";
+			src: url("../fonts/OpenSansLight/OpenSansLight.eot");
+			src: url("../fonts/OpenSansLight/OpenSansLight.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/OpenSansLight/OpenSansLight.woff") format("woff"),
+			url("../fonts/OpenSansLight/OpenSansLight.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+	@font-face {
+			font-family: "OpenSansRegular";
+			src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
+			src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+			url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
 
 
 
@@ -19,9 +43,10 @@ $grey:#f3f3f3;
 $black:#262626;
 $yellow:#f1d432;
 $red:#cb461d;
-
-
-
+$eny-font:arial,sans-serif;
+$osc:OpenSansCond,$eny-font;
+$osl:OpenSansLight,$eny-font;
+$osr:OpenSansRegular, $eny-font;
 
 
 
@@ -38,6 +63,7 @@ $red:#cb461d;
 *{
 	margin: 0;
 	padding: 0;
+	font-family: $osr;
 
 
 }
@@ -76,17 +102,23 @@ img{
 	}
 }
 .text-logo{
-
+			padding-top:3.5rem;
 	&_link{
 		font-size: 3.2rem;
+		font-family: $osc;
+		font-weight:900 ;
+		text-transform: uppercase;
+
 	}
 	&_text{
 		display: block;
 		font-size: 1.6rem;
+		text-transform: uppercase;
+
 	}
 }
 .cont-header{
-	padding: 2rem 0;
+	padding: 1.5rem 0 2rem;
 	background: #f3f3f3;
 }
 /*----------------nav----------------*/
@@ -102,11 +134,15 @@ img{
 			&_link{
 				color:#fff;
 				font-size: 1.8rem;
-				padding: 1rem;
+				padding: 1rem 0 ;
+				margin-right: 4rem;
 				display: block;
 				text-transform: uppercase;
+				font-family: $osc;
+				font-weight: 700;
+				transition: .3s;
 				&:hover{
-					color: yellow;
+					color: $yellow;
 				}
 			}
 	}
@@ -152,6 +188,7 @@ img{
 /*-----------------------event----------------*/
 .wrap-event{
 	background: #fff;
+	padding: 55px 35px 45px ;
 }
 .post{
 	border-top:3px solid #cb461d;
@@ -159,21 +196,142 @@ img{
 	display: -ms-flex;
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 5px;
 
 	&_date{
 			font-size: 7rem;
+			font-family: $osl;
+	}
+	&_name{
+		font-family: $osl;
+		font-weight: 300;
+		line-height: 2.6rem;
+		font-size: 2.4rem;
+		transition: .2s;
+		&:hover{
+			color: $red;
+		}
+	}
+	&_short{
+		margin: 2rem 0 1rem 0;
+		font-size: 1.1rem;
+		line-height: 1.8rem;
+
 	}
 	&_read-next{
-		color: red;
+		color:$yellow;
+		transition: .3s;
+		&:hover{
+			color: $red;
+		}
 	}
 }
+.blue-post{
+	background: #58a2c4;
+}
+.blue-post .post, .yellow-post .post{
+	border-top: none;
+}
+.yellow-post{
+	background: #f1d432;
+
+}
+.yellow-post .post .post_read-next{
+	color:#58a2c4;
+}
+
+.about-cont{
+	margin-top: 20px;
+	padding: 20px;
+	background: $grey;
 
 
+}
+.about-text{
+	text-align: justify;
+	font-size: 1.1rem;
+
+}
+.logo-about{
+	font-size:1.8rem ;
+	text-transform: uppercase;
+	position: relative;
+	background: $grey;
+	z-index: 2;
+	padding-bottom: 1rem;
+
+}
+.logo-about::after{
+	background: $red;
+	display: inline-block;
+	height: 4px;
+	margin-right: -100%;
+	margin-left: 10px;
+	position: relative;
+	top: 0;
+	width: 100%;
+	content: '';
+
+}
+.about-sec{
+	overflow: hidden;
+}
+.item-partic{
+	height: 210px;
+		&_name{
+			font-size: 1.6rem;
+			font-weight: 300;
+			font-family:$osl;
+			line-height: 2rem;
+			transition: .3s;
+				&:hover{
+					color: $red;
+
+				}
+				&_date{
+					margin-bottom: 10px;
+				}
+		}
+
+}
+.item-partic{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-direction: column;
+}
+
+.last-new{
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		margin-bottom: 3rem;
 
 
+	&_img{
+			align-self: flex-start;
 
-
-
+	}
+	&_content{
+			margin-left: 20px;
+		&_date{
+				line-height: 1.8rem;
+				font-family: $osr;
+				font-weight: 900;
+				font-size: 1.2rem;
+		}
+		&_main{
+			font-weight: 400;
+			line-height: 1.8rem;
+			font-size: 1.1rem;
+			display: block;
+			transition: .2s;
+			&:hover{
+				color: $red;
+			}
+		}
+	}
+}
 
 
 
