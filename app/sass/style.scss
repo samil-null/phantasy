@@ -198,7 +198,7 @@ img{
 /*-----------------------event----------------*/
 .wrap-event{
 	background: #fff;
-	padding: 55px 35px 45px ;
+	padding: 55px 0 45px 0 ;
 }
 .post{
 	border-top:3px solid #cb461d;
@@ -206,11 +206,13 @@ img{
 	display: -ms-flex;
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 5px;
+	padding: 20px 5px;
 
 	&_date{
 			font-size: 7rem;
 			font-family: $osl;
+			line-height: 1.2;
+			text-transform: uppercase;
 	}
 	&_name{
 		font-family: $osl;
@@ -236,13 +238,13 @@ img{
 		}
 	}
 }
-.blue-post{
+.blue-post div{
 	background: #58a2c4;
 }
 .blue-post .post, .yellow-post .post{
 	border-top: none;
 }
-.yellow-post{
+.yellow-post div{
 	background: #f1d432;
 
 }
@@ -269,6 +271,7 @@ img{
 	background: $grey;
 	z-index: 2;
 	padding-bottom: 1rem;
+	overflow: hidden;
 
 }
 .logo-about::after{
@@ -353,14 +356,27 @@ img{
 	}
 }
 
-.all-video{
+.next-btn{
 	font-size: 1.2rem;
 	font-family: $osb;
 	font-weight: 900;
 	line-height: 1.8rem;
 	margin-bottom: 20px;
 	text-transform: uppercase;
-	color: red;
+	 &::after{
+		 content: "\f105";
+		 display: inline-block;
+		 font-family: FontAwesome;
+		 font-size: 15px;
+		 padding-left: 2px;
+		 font-weight: 900;
+
+
+	 }
+
+}
+.all-artic{
+	margin:10px 0 20px;
 }
 
 

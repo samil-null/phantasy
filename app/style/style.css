@@ -131,7 +131,7 @@ img {
 /*-----------------------event----------------*/
 .wrap-event {
   background: #fff;
-  padding: 55px 35px 45px; }
+  padding: 55px 0 45px 0; }
 
 .post {
   border-top: 3px solid #cb461d;
@@ -139,10 +139,12 @@ img {
   display: -ms-flex;
   display: flex;
   flex-direction: column;
-  padding-bottom: 5px; }
+  padding: 20px 5px; }
   .post_date {
     font-size: 7rem;
-    font-family: OpenSansLight, arial, sans-serif; }
+    font-family: OpenSansLight, arial, sans-serif;
+    line-height: 1.2;
+    text-transform: uppercase; }
   .post_name {
     font-family: OpenSansLight, arial, sans-serif;
     font-weight: 300;
@@ -161,13 +163,13 @@ img {
     .post_read-next:hover {
       color: #cb461d; }
 
-.blue-post {
+.blue-post div {
   background: #58a2c4; }
 
 .blue-post .post, .yellow-post .post {
   border-top: none; }
 
-.yellow-post {
+.yellow-post div {
   background: #f1d432; }
 
 .yellow-post .post .post_read-next {
@@ -188,7 +190,8 @@ img {
   position: relative;
   background: #f3f3f3;
   z-index: 2;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  overflow: hidden; }
 
 .logo-about::after {
   background: #cb461d;
@@ -253,11 +256,20 @@ img {
     line-height: 1.8rem;
     font-family: OpenSansLight, arial, sans-serif; }
 
-.all-video {
+.next-btn {
   font-size: 1.2rem;
   font-family: OpenSansBold, arial, sans-serif;
   font-weight: 900;
   line-height: 1.8rem;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  color: red; }
+  text-transform: uppercase; }
+  .next-btn::after {
+    content: "\f105";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 15px;
+    padding-left: 2px;
+    font-weight: 900; }
+
+.all-artic {
+  margin: 10px 0 20px; }
