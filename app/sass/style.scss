@@ -499,8 +499,40 @@ footer .container{
 		}
 	}
 }
-.active-page{
+.active-page, .number-page:hover{
 	border: 1px solid black;
 	display: block;
 	padding: .3rem .5rem;
+}
+.number-page:hover{
+	border: 1px solid black;
+	display: block;
+	padding: .3rem .5rem;
+}
+/*----------------участники-----------*/
+.list-partic{
+	background: $grey;
+	padding-top: 25px;
+	padding-bottom: 40px;
+}
+.head-partic{
+	margin-bottom: 15px;
+	margin-top: 10px;
+
+}
+.item-partic{
+	height: 250px;
+}
+.name-partic{
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	font-weight: 500;
+	font-family: $osl;
+	margin: 1rem 0;
+	display: block;
+
+}
+.date-partic{
+	font-family: $osl;
+	font-weight: 500;
 }
