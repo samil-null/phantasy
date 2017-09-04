@@ -536,3 +536,47 @@ footer .container{
 	font-family: $osl;
 	font-weight: 500;
 }
+.wrap-about{
+
+	.row{
+		margin-bottom: 3rem;
+
+		.col-lg-7{
+			span{
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+.about-prof{
+	p{
+		font-size: 1.5rem;
+		margin-top: 3.5rem;
+	}
+}
+.profile{
+	background: $grey;
+	padding-top: 2.5rem;
+	padding-bottom: 4rem;
+
+	
+	.about-watch{
+		font-family: $osb;
+		font-weight: 900;
+		font-size: 1.4rem;
+	}
+
+
+}
+.comment-profile{
+	margin-top: 30px; 
+}
+.name-author{
+	font-family: $osb;
+	font-size: 1.6rem;
+}
+.main-comment, .about-author{
+  
+  	font-size: 1.2rem
+  
+}
